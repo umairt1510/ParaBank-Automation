@@ -1,0 +1,8 @@
+datasources:470ca4ffa365fefc03643e21c39bd96750058e49
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:31480f39c753acd482a8f435c3ee047c84f7c876
+--suite Suites.02 Login Testcase
+--suite Suites.03 New Account Testcase
+--suite Suites.04 Bill Pay Testcase
+--suite Suites.05 Transfer Testcase

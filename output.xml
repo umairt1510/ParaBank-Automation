@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.2 on win32)" generated="2026-03-03T12:20:53.300779" rpa="false" schemaversion="5">
+<suite id="s1" name="01 Register Testcase" source="C:\Users\umair\Projects\ParaBank-Automation\testFiles\01_register_testcase.robot">
+<kw name="Open Browser to Register Page" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:53.451851" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>https://parabank.parasoft.com/parabank/index.htm</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-03T12:20:53.451698" elapsed="1.213491"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-03T12:20:54.665409" elapsed="0.024259"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-03-03T12:20:54.689861" elapsed="0.000198"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:20:53.451195" elapsed="1.238934"/>
+</kw>
+<test id="s1-t1" name="TC01 - Successful Registration" line="9">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:54.691258" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:54.690982" elapsed="0.428015"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:55.119516" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:55.119219" elapsed="0.353118"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:55.472821" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:55.472551" elapsed="0.341552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:55.814587" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:55.814314" elapsed="0.345824"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:56.160643" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:56.160369" elapsed="0.344617"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:56.505460" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:56.505183" elapsed="0.345311"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:56.850968" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:56.850710" elapsed="0.342290"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:57.193470" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:57.193204" elapsed="0.343007"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:57.536701" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:57.536422" elapsed="0.344042"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:57.880936" level="INFO">Typing text 'umair12' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:57.880675" elapsed="0.344593"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:58.225760" level="INFO">Typing text 'Umair321#123' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:58.225486" elapsed="0.340671"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:58.566629" level="INFO">Typing text 'Umair321#123' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:58.566362" elapsed="0.341363"/>
+</kw>
+<arg>Umair</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair12</arg>
+<arg>Umair321#123</arg>
+<arg>Umair321#123</arg>
+<status status="PASS" start="2026-03-03T12:20:54.690696" elapsed="4.217179"/>
+</kw>
+<kw name="Valid Register" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:58.908729" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:58.908522" elapsed="0.373124"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:59.491168" level="INFO">Current page contains text 'Your account was created successfully. You are now logged in.'.</msg>
+<arg>Your account was created successfully. You are now logged in.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:20:59.281859" elapsed="0.209409"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:20:58.908244" elapsed="0.583117"/>
+</kw>
+<kw name="Logout User" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:20:59.492082" level="INFO">Clicking element 'xpath=//a[text()="Log Out"]'.</msg>
+<arg>${LOGOUT_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:20:59.491926" elapsed="0.445910"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-03T12:20:59.938036" elapsed="0.107184"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:20:59.491694" elapsed="0.553660"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:20:54.690202" elapsed="5.355437"/>
+</test>
+<test id="s1-t2" name="TC02 - Registration With Missing First Name" line="16">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:00.047140" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:00.046984" elapsed="0.353002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:00.400585" level="INFO">Typing text '' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:00.400285" elapsed="0.336556"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:00.737329" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:00.737064" elapsed="0.353645"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:01.091171" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:01.090909" elapsed="0.355550"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:01.446949" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:01.446680" elapsed="0.351802"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:01.798964" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:01.798697" elapsed="0.351674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:02.150847" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:02.150583" elapsed="0.352033"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:02.503109" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:02.502831" elapsed="0.344257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:02.847571" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:02.847306" elapsed="0.345455"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:03.193227" level="INFO">Typing text 'umair13' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:03.192962" elapsed="0.340691"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:03.534133" level="INFO">Typing text 'Umair321#123' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:03.533864" elapsed="0.340459"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:03.874802" level="INFO">Typing text 'Umair321#123' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:03.874533" elapsed="0.338430"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair13</arg>
+<arg>Umair321#123</arg>
+<arg>Umair321#123</arg>
+<status status="PASS" start="2026-03-03T12:21:00.046412" elapsed="4.166678"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:04.213646" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:04.213403" elapsed="0.350486"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:04.773456" level="INFO">Current page contains text 'First name is required.'.</msg>
+<arg>First name is required.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:04.564322" elapsed="0.209231"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:00.046010" elapsed="4.727833"/>
+</test>
+<test id="s1-t3" name="TC03 - Registration With Missing Last Name" line="23">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:04.775235" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:04.775087" elapsed="0.337411"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:05.112985" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:05.112714" elapsed="0.339096"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:05.452271" level="INFO">Typing text '' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:05.452011" elapsed="0.336086"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:05.788557" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:05.788296" elapsed="0.355500"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:06.144288" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:06.144015" elapsed="0.346387"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:06.490894" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:06.490625" elapsed="0.343735"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:06.834808" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:06.834575" elapsed="0.341729"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:07.176802" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:07.176530" elapsed="0.343751"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:07.520767" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:07.520499" elapsed="0.344891"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:07.865803" level="INFO">Typing text 'umair14' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:07.865572" elapsed="0.341176"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:08.207309" level="INFO">Typing text 'Umair321#123' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:08.207003" elapsed="0.338940"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:08.546376" level="INFO">Typing text 'Umair321#123' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:08.546138" elapsed="0.337039"/>
+</kw>
+<arg>Umair</arg>
+<arg>${EMPTY}</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair14</arg>
+<arg>Umair321#123</arg>
+<arg>Umair321#123</arg>
+<status status="PASS" start="2026-03-03T12:21:04.774545" elapsed="4.108766"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:08.883835" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:08.883620" elapsed="0.345102"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:09.438040" level="INFO">Current page contains text 'Last name is required.'.</msg>
+<arg>Last name is required.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:09.229048" elapsed="0.209088"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:04.774196" elapsed="4.664179"/>
+</test>
+<test id="s1-t4" name="TC04 - Registration With Missing Username" line="30">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:09.439695" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:09.439549" elapsed="0.331619"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:09.771601" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:09.771363" elapsed="0.340667"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:10.112461" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:10.112225" elapsed="0.340712"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:10.453367" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:10.453132" elapsed="0.354754"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:10.808352" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:10.808107" elapsed="0.352771"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:11.161353" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:11.161087" elapsed="0.351241"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:11.512804" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:11.512542" elapsed="0.351776"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:11.864793" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:11.864526" elapsed="0.354492"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:12.219493" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:12.219228" elapsed="0.344888"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:12.564601" level="INFO">Typing text '' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:12.564327" elapsed="0.338240"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:12.903101" level="INFO">Typing text 'Umair321#123' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:12.902809" elapsed="0.339817"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:13.243103" level="INFO">Typing text 'Umair321#123' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:13.242836" elapsed="0.339046"/>
+</kw>
+<arg>Umair</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>${EMPTY}</arg>
+<arg>Umair321#123</arg>
+<arg>Umair321#123</arg>
+<status status="PASS" start="2026-03-03T12:21:09.439024" elapsed="4.143008"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:13.582577" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:13.582348" elapsed="0.339635"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:14.131087" level="INFO">Current page contains text 'Username is required.'.</msg>
+<arg>Username is required.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:13.922340" elapsed="0.208866"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:09.438660" elapsed="4.692809"/>
+</test>
+<test id="s1-t5" name="TC05 - Registration With Missing Password" line="37">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:14.133249" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:14.133095" elapsed="0.338908"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:14.472503" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:14.472231" elapsed="0.340810"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:14.813535" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:14.813262" elapsed="0.350487"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:15.164230" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:15.163963" elapsed="0.356828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:15.521251" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:15.521003" elapsed="0.342496"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:15.863972" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:15.863707" elapsed="0.344358"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:16.208495" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:16.208260" elapsed="0.349021"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:16.557768" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:16.557500" elapsed="0.354334"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:16.912315" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:16.912050" elapsed="0.345807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:17.258341" level="INFO">Typing text 'umair15' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:17.258072" elapsed="0.350463"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:17.609021" level="INFO">Typing text '' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:17.608754" elapsed="0.335712"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:17.944946" level="INFO">Typing text '' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:17.944680" elapsed="0.333684"/>
+</kw>
+<arg>Umair</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair15</arg>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2026-03-03T12:21:14.132376" elapsed="4.146115"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:18.279113" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:18.278870" elapsed="0.347476"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:18.835641" level="INFO">Current page contains text 'Password is required.'.</msg>
+<arg>Password is required.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:18.626711" elapsed="0.209027"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:14.132010" elapsed="4.703976"/>
+</test>
+<test id="s1-t6" name="TC06 - Registration With Mismatched Passwords" line="44">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:18.837221" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:18.837070" elapsed="0.343186"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:19.180750" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:19.180474" elapsed="0.348190"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:19.529140" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:19.528873" elapsed="0.350237"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:19.879613" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:19.879347" elapsed="0.358064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:20.237890" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:20.237624" elapsed="0.342906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:20.580992" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:20.580731" elapsed="0.340963"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:20.922177" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:20.921911" elapsed="0.351917"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:21.274306" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:21.274040" elapsed="0.343784"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:21.618274" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:21.618020" elapsed="0.343512"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:21.962004" level="INFO">Typing text 'umair16' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:21.961743" elapsed="0.341498"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:22.303723" level="INFO">Typing text 'Umair321' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:22.303457" elapsed="0.338152"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:22.642077" level="INFO">Typing text 'WrongPass' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:22.641806" elapsed="0.337145"/>
+</kw>
+<arg>Umair</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair16</arg>
+<arg>Umair321</arg>
+<arg>WrongPass</arg>
+<status status="PASS" start="2026-03-03T12:21:18.836784" elapsed="4.142294"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:22.979628" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:22.979382" elapsed="0.340658"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:23.529367" level="INFO">Current page contains text 'Passwords did not match.'.</msg>
+<arg>Passwords did not match.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:23.320404" elapsed="0.209050"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:18.836408" elapsed="4.693380"/>
+</test>
+<test id="s1-t7" name="TC07 - Registration With Duplicate Username" line="51">
+<kw name="Enter Registration Info" owner="register_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:23.531150" level="INFO">Clicking element 'xpath=//a[text()="Register"]'.</msg>
+<arg>${REGISTER_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:23.531003" elapsed="0.356593"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:23.888059" level="INFO">Typing text 'Umair' into text field 'id:customer.firstName'.</msg>
+<arg>${FIRSTNAME_FIELD}</arg>
+<arg>${first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:23.887812" elapsed="0.341148"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:24.229426" level="INFO">Typing text 'Tariq' into text field 'id:customer.lastName'.</msg>
+<arg>${LASTNAME_FIELD}</arg>
+<arg>${last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:24.229161" elapsed="0.341214"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:24.570847" level="INFO">Typing text '213 Kennedy Ave' into text field 'id:customer.address.street'.</msg>
+<arg>${ADDRESS_FIELD}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:24.570582" elapsed="0.354301"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:24.925358" level="INFO">Typing text 'Toronto' into text field 'id:customer.address.city'.</msg>
+<arg>${CITY_FIELD}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:24.925093" elapsed="0.358240"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:25.283816" level="INFO">Typing text 'Ontario' into text field 'id:customer.address.state'.</msg>
+<arg>${STATE_FIELD}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:25.283546" elapsed="0.351925"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:25.635984" level="INFO">Typing text 'M3S2S2' into text field 'id:customer.address.zipCode'.</msg>
+<arg>${ZIP_FIELD}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:25.635682" elapsed="0.350924"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:25.987077" level="INFO">Typing text '1234124321' into text field 'id:customer.phoneNumber'.</msg>
+<arg>${PHONE_FIELD}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:25.986811" elapsed="0.353331"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:26.340609" level="INFO">Typing text '482-73-6159' into text field 'id:customer.ssn'.</msg>
+<arg>${SSN_FIELD}</arg>
+<arg>${ssn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:26.340352" elapsed="0.345196"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:26.685987" level="INFO">Typing text 'umair12' into text field 'id:customer.username'.</msg>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:26.685754" elapsed="0.343658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:27.029890" level="INFO">Typing text 'Umair321#123' into text field 'id:customer.password'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:27.029625" elapsed="0.344622"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:27.374833" level="INFO">Typing text 'Umair321#123' into text field 'id:repeatedPassword'.</msg>
+<arg>${CONFIRM_PASSWORD_FIELD}</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:27.374500" elapsed="0.342564"/>
+</kw>
+<arg>Umair</arg>
+<arg>Tariq</arg>
+<arg>213 Kennedy Ave</arg>
+<arg>Toronto</arg>
+<arg>Ontario</arg>
+<arg>M3S2S2</arg>
+<arg>1234124321</arg>
+<arg>482-73-6159</arg>
+<arg>umair12</arg>
+<arg>Umair321#123</arg>
+<arg>Umair321#123</arg>
+<status status="PASS" start="2026-03-03T12:21:23.530715" elapsed="4.186512"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:27.717912" level="INFO">Clicking element 'xpath=//input[@value="Register"]'.</msg>
+<arg>${REGISTER_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-03T12:21:27.717594" elapsed="0.350034"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-03-03T12:21:28.277989" level="INFO">Current page contains text 'This username already exists.'.</msg>
+<arg>This username already exists.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-03-03T12:21:28.068031" elapsed="0.210129"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:21:23.530369" elapsed="4.748106"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-03T12:21:28.279224" elapsed="2.185781"/>
+</kw>
+<status status="PASS" start="2026-03-03T12:20:53.301943" elapsed="37.163156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="01 Register Testcase" id="s1" pass="7" fail="0" skip="0">01 Register Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
